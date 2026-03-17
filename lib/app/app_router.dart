@@ -32,7 +32,7 @@ class AppRouter {
   static final String contacts = '/contacts';
   static final String notifications = '/notifications';
   final GoRouter router = GoRouter(
-    initialLocation: dashboard,
+    initialLocation: auth,
     routes: [
       GoRoute(path: auth, builder: (context, state) => AuthScreen()),
       GoRoute(

@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:site_admin_pannel/app/app_colors.dart';
+import 'package:site_admin_pannel/app/app_router.dart';
 import 'package:site_admin_pannel/widgets/custom_elevated_button.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -31,9 +33,11 @@ class _AuthScreenState extends State<AuthScreen> {
 
     if (isLogin) {
       /// LOGIN API CALL
+      context.go(AppRouter.dashboard);
       debugPrint("Login: ${emailController.text}");
     } else {
       /// SIGNUP API CALL
+      context.go(AppRouter.dashboard);
       debugPrint("Signup: ${usernameController.text}");
     }
   }
