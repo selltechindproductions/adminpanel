@@ -3,8 +3,11 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_quill/flutter_quill.dart' as quill;
 import 'package:site_admin_pannel/app/app_router.dart';
 import 'package:site_admin_pannel/app/app_theme.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  usePathUrlStrategy();
   runApp(const MyApp());
 }
 
